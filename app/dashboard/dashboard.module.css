@@ -1,0 +1,81 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.greeting {
+  padding-top: 8px;
+}
+.name {
+  font-family: var(--font-display);
+  font-size: 56px;
+  text-transform: lowercase;
+  line-height: 0.9;
+  color: var(--bone);
+  margin-top: 4px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.statCard {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.statLabel {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+.statValue {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--bone);
+  line-height: 1;
+}
+.statSub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nextCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+.nextCard:hover {
+  border-color: var(--aqua);
+}
+.nextTitle {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.arrow {
+  font-size: 18px;
+  color: var(--aqua);
+}

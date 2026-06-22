@@ -1,22 +1,29 @@
-import type { Metadata } from 'next'
-import '@/styles/globals.css'
+import { redirect } from 'next/navigation'
+import { createClient } from '@/lib/supabase/server'
+import NavBar from '@/components/layout/NavBar'
 
-export const metadata: Metadata = {
-  title: 'Grind Journey · omg.',
-  description: 'Your personalized Success Plan — Own My Grind',
-  icons: {
-    icon: '/favicon.svg',
-  },
-}
-
-export default function RootLayout({
+export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+
+  if (!user) redirect('/auth/login')
+
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('*')
+    .eq('id', user.id)
+    .single()
+
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <div className="page-with-nav">
+      <NavBar profile={profile} />
+      <main style={{ padding: '24px 20px', maxWidth: 700, margin: '0 auto' }}>
+        {children}
+      </main>
+    </div>
   )
 }

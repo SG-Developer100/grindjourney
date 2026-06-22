@@ -31,7 +31,6 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* Six areas */}
       <div className={styles.areas}>
         {[
           ['Athletic', 'Build your skills on the court and in the gym.'],
@@ -39,7 +38,7 @@ export default function LandingPage() {
           ['Leadership', 'Show up. Step up. Bring others with you.'],
           ['Wellness', 'Sleep, water, and mental reset — the basics matter.'],
           ['Community', 'Give back to the game and your neighborhood.'],
-          ['Personal Growth', 'Know who you are and where you're going.'],
+          ['Personal Growth', "Know who you are and where you're going."],
         ].map(([area, desc]) => (
           <div key={area} className={styles.areaCard}>
             <span className={styles.areaName}>{area}</span>

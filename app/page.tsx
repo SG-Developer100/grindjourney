@@ -31,6 +31,7 @@ export default function LandingPage() {
         </div>
       </div>
 
+      {/* Six areas */}
       <div className={styles.areas}>
         {[
           ['Athletic', 'Build your skills on the court and in the gym.'],

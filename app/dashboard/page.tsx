@@ -6,7 +6,7 @@ import ProgressRing from '@/components/ui/ProgressRing'
 import styles from './dashboard.module.css'
 
 export default async function DashboardPage() {
-  const supabase = createClient()
+  const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/auth/login')
 

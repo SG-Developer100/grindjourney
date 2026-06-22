@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from './admin.module.css'
 
 export default async function AdminPage() {
-  const supabase = createClient()
+  const supabase = await createClient()
 
   const { data: youth } = await supabase
     .from('profiles')

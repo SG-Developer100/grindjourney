@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: 'Grind Journey · omg.',
   description: 'Your personalized Success Plan — Own My Grind',
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/icon.svg',
   },
 }
 

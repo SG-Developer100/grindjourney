@@ -1,0 +1,91 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--surface-0);
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.steps {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.stepDot {
+  height: 3px;
+  flex: 1;
+  background: var(--surface-3);
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+.stepActive {
+  background: var(--aqua);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 48px;
+  text-transform: lowercase;
+  color: var(--bone);
+  line-height: 0.9;
+  margin-bottom: 16px;
+}
+.aqua {
+  color: var(--aqua);
+}
+
+.heading {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sub {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.error {
+  font-size: 13px;
+  color: var(--red);
+  padding: 10px 14px;
+  background: rgba(255, 93, 93, 0.1);
+  border: 1px solid rgba(255, 93, 93, 0.3);
+  border-radius: 6px;
+}
+
+.footer {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.link {
+  color: var(--aqua);
+  text-decoration: none;
+  font-weight: 600;
+}
+.link:hover {
+  text-decoration: underline;
+}

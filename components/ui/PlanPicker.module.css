@@ -1,0 +1,22 @@
+.picker { display: flex; flex-direction: column; gap: 10px; }
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: border-color 0.15s, background 0.1s;
+}
+.card:hover { border-color: rgba(87,199,255,0.4); }
+.selected { border-color: var(--aqua); background: rgba(87,199,255,0.05); }
+
+.check { font-size: 18px; color: var(--aqua); margin-top: 1px; flex-shrink: 0; }
+
+.name { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.desc { font-size: 13px; font-weight: 300; color: var(--text-secondary); line-height: 1.5; }
